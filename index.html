@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pompompurin 💛</title>
+  <style>
+    :root {
+      --bg: #fffbea;
+      --text: #5a4636;
+      --accent: #f7d36a;
+      --card: #fff6da;
+      --shadow: rgba(0,0,0,0.1);
+    }
+
+    [data-theme="dark"] {
+      --bg: #2a211c;
+      --text: #fbe9b6;
+      --accent: #d9b651;
+      --card: #3a2f29;
+      --shadow: rgba(0,0,0,0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Comic Sans MS", "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--accent);
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: var(--card);
+      border-radius: 16px;
+      box-shadow: 0 4px 16px var(--shadow);
+      padding: 20px;
+    }
+
+    h2 {
+      color: var(--text);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style-type: "🍮 ";
+    }
+
+    img {
+      border-radius: 12px;
+      margin: 10px;
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      background-color: var(--accent);
+      margin-top: 30px;
+      box-shadow: 0 -2px 8px var(--shadow);
+    }
+
+    #theme-btn {
+      margin-top: 10px;
+      padding: 8px 14px;
+      background-color: var(--card);
+      border: 2px solid var(--text);
+      border-radius: 8px;
+      cursor: pointer;
+      color: var(--text);
+      font-weight: bold;
+    }
+
+    #theme-btn:hover {
+      background-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐾 Pompompurin 💛</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#datos">Datos</a>
+      <a href="#curiosidades">Curiosidades</a>
+      <a href="#galeria">Galería</a>
+    </nav>
+    <button id="theme-btn">🌙 Modo noche</button>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>¿Quién es Pompompurin?</h2>
+      <p>
+        <strong>Pompompurin</strong> es un adorable perrito dorado de la familia <em>Sanrio</em>, el mismo mundo de Hello Kitty.
+        Es un <strong>Golden Retriever</strong> con una boina marrón que ama dormir, comer flan y salir con sus amigos.
+      </p>
+    </section>
+
+    <section id="datos">
+      <h2>Datos principales</h2>
+      <ul>
+        <li><strong>Nombre completo:</strong> Pompompurin</li>
+        <li><strong>Fecha de nacimiento:</strong> 16 de abril</li>
+        <li><strong>Animal:</strong> Golden Retriever</li>
+        <li><strong>Color favorito:</strong> Amarillo dorado</li>
+        <li><strong>Comida favorita:</strong> Pudín de caramelo (¡flan!) 🍮</li>
+        <li><strong>Pasatiempos:</strong> Dormir, coleccionar zapatos y pasear</li>
+      </ul>
+    </section>
+
+    <section id="curiosidades">
+      <h2>Curiosidades</h2>
+      <p>Pompompurin vive en su casa amarilla dentro del vecindario <em>Pompompurin Town</em>. Sus mejores amigos son:</p>
+      <ul>
+        <li><strong>Muffin</strong> — un hámster blanco muy tierno.</li>
+        <li><strong>Scone</strong> — un ratoncito divertido.</li>
+        <li><strong>Custard</strong> — un perrito blanco con quien a veces compite.</li>
+      </ul>
+      <p>
+        Su lema es: <q>¡Vamos a salir a divertirnos!</q>  
+        y sueña con ser cada día más esponjoso y feliz. 💛
+      </p>
+    </section>
+
+    <section id="galeria">
+      <h2>Galería</h2>
+      <p>Aquí tienes algunas imágenes de Pompompurin:</p>
+      <img src="pompom.webp" alt="Pompompurin feliz" width="200">
+      <img src="oda.jpg" alt="Pompompurin sentado" width="200">
+      <img src="k.jpeg" alt="Pompompurin adorable" width="200">
+    </section>
+  </main>
+
+  <footer>
+    <p>💛 Página creada la fan numero 1 de Pompompurin(Valeria Quijada, 32.576.002) 💛</p>
+   
+  </footer>
+
+  <script>
+    const themeBtn = document.getElementById('theme-btn');
+    const html = document.documentElement;
+    themeBtn.addEventListener('click', () => {
+      const dark = html.getAttribute('data-theme') === 'dark';
+      if (dark) {
+        html.removeAttribute('data-theme');
+        themeBtn.textContent = '🌙 Modo noche';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        themeBtn.textContent = '☀️ Modo día';
+      }
+    });
+  </script>
+</body>
+</html>
